@@ -8,5 +8,5 @@ import { HttpServiceService } from './http-service.service';
   providers:[HttpServiceService]
 })
 export class AppComponent {
-  title = 'Github-app';
+  // title = 'Github-app';
 }

@@ -5,13 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GithubComponent } from './github/github.component';
 import{ HttpClientModule} from '@angular/common/http';
-import { GitFormComponent } from './git-form/git-form.component'
+import { GitFormComponent } from './git-form/git-form.component';
+import { DaysPastPipe } from './days-past.pipe'
 
 @NgModule({
   declarations: [
     AppComponent,
     GithubComponent,
-    GitFormComponent
+    GitFormComponent,
+    DaysPastPipe
   ],
   imports: [
     BrowserModule,

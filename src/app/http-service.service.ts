@@ -48,8 +48,8 @@ this.repo = new Repos("","","",new Date(),"","","",new Date())
     )
     this.http.get<any>(`https://api.github.com/users/${userName}/repos`).toPromise().then(response=>{
       for(var i=0; i<response.length; i++){
-        this.newUser = new Repos(response[i].name,response[i].fname,response[i].description,response[i].updatedOn,response[i].html_url,response[i].clone_url,response[i].language,response[i].createdOn),
-        this.repoData.push(this.newUser);
+        this.newUser = new Repos(response[i].name,response[i].fname,response[i].description,response[i].updatedOn,response[i].html_url,response[i].clone_url,response[i].language,response[i].createdOn);
+        // this.repoData.push(this.newUser);
       }
       resolve()
     },

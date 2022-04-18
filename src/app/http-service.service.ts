@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class HttpServiceService {
   user!: User;
   repo!:Repos;
-  repoData =[];
+  repoData:any[] =[];
   newUser:any =[]; // Holds the Property for Every Array we Push to the repoData Array
   
 
@@ -46,11 +46,11 @@ this.repo = new Repos("","","",new Date(),"","","",new Date());
     },
     error=>{ reject(error)}
     )
-    this.http.get<any>(`https://api.github.com/users/${userName}`).toPromise().then(response=>{
+    this.http.get<any>("https://api.github.com/users/" + userName + "/repos").toPromise().then(response=>{
       for(var i=0; i<response.length; i++){
-        this.newUser = new Repos(response[i].name,response[i].fname,response[i].description,response[i].updatedOn,response[i].html_url,response[i].clone_url,response[i].language,response[i].createdOn);
-         this.repoData = this.newUser
-        console.log(this.repoData);
+        this.newUser = new Repos(response[i].name,response[i].full_name,response[i].description,response[i].updated_at,response[i].html_url,response[i].clone_url,response[i].language,response[i].created_at);
+         this.repoData.push(this.newUser);
+        // console.log(this.repoData);
         
          
       }

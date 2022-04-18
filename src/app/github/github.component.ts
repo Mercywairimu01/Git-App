@@ -12,9 +12,8 @@ import { Repos } from '../repos';
 export class GithubComponent implements OnInit {
   // myRepos:any =[];
   // myProfile:any =[];
-
    user!:User;
-   repoD:any =[];
+   repoDetails:any =[];
    httpsevice!:HttpServiceService;
    hideInput!:boolean
 
@@ -31,7 +30,7 @@ export class GithubComponent implements OnInit {
 
   ngOnInit(): void {
    this.user =this.httpsevice.user; // Get the Response from SearchGithubService from user 
-    this.repoD =this.httpsevice.repoData;
+    this.repoDetails =this.httpsevice.repoData;
 
   }
 

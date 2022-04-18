@@ -1,0 +1,13 @@
+.search{
+    background-color: aquamarine ;
+    display: flex; 
+    justify-content: center;  
+    gap: 20px; 
+
+}
+#username{
+    width: 200px;
+    text-align: center;
+    
+   
+}

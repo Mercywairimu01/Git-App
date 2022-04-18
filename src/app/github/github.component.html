@@ -1,19 +1,25 @@
 <div class="container">
   <div class="row">
-     <div class="col-4" id="profile">
-         <h4>User Profile</h4>
-         <hr>
+    <h4>User Profile</h4>
+    <hr>
+     <div class="col-6" id="profile">
+         
+        
         <h5>{{user.login}}</h5>
         <img src="{{ httpsevice.user.avatar_url}}" alt="git avatar">
-        <p>Bio:{{user.bio}}</p>
+        <p>{{user.bio}}</p>
+     </div>
+        <div class="col-4" id="profiledetails">
         <p> Joined on:{{user.created_at|date}}</p>
         <p>Last update:{{user.updated_at|date}}</p>
         <p>Repositotires:{{user.public_repos}}</p>
         <p>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;<a href="{{user.html_url}}" target="_blank">View Github Profile</a></p>
         <button>  <a class="btn btn-default btn-xs" (click)="Back()" > Back</a></button> 
      </div>
-     <div class="col-7">
-         <h3>Repositories</h3>
+     </div>
+     <div class="row">
+     <div class="col">
+         <h3 style="text-align: center;">Repositories</h3>
          <hr>
         <div *ngFor="let repoD of repoDetails ;let i =index">
         <p><a href="{{repoD.html_url}}"  target="_blank">{{repoD.name}}</a></p>

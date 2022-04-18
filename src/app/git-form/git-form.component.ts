@@ -21,13 +21,12 @@ export class GitFormComponent implements OnInit {
      this.seeInput = true;
      this.seeData = false;
    }
-  seeUserInput(hideInput: any) {
+  seeUserInput(hideInput: boolean) {
     this.seeInput =hideInput;
     this.seeData =false;
   }
-  getUser(){
 
-  }
+  
 
   constructor(httpsevice:HttpServiceService) {
     this.httpsevice =httpsevice;

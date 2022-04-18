@@ -1,11 +1,12 @@
-<div class="container">
+<div class="container" id="hide" >
   <div class="row">
+
     <h4>User Profile</h4>
     <hr>
      <div class="col-6" id="profile">
          
         
-        <h5>{{user.login}}</h5>
+        <h4>{{user.login}}</h4>
         <img src="{{ httpsevice.user.avatar_url}}" alt="git avatar">
         <p>{{user.bio}}</p>
      </div>
@@ -19,15 +20,20 @@
      </div>
      <div class="row">
      <div class="col">
+        
          <h3 style="text-align: center;">Repositories</h3>
          <hr>
+         
         <div *ngFor="let repoD of repoDetails ;let i =index">
-        <p><a href="{{repoD.html_url}}"  target="_blank">{{repoD.name}}</a></p>
-        <p>Created at:{{repoD.created_at|date}}</p>
+         <div class="git-results">
+        <p style="font-weight: bolder;"><a href="{{repoD.html_url}}"  target="_blank">{{repoD.name}}</a></p>
+       
         <P>Clone:<b>{{repoD.clone_url}}</b></P>
         <p class="description">{{repoD.description}}</p>
-        <p>Language:{{repoD.Language}}</p>
-        <p>Last Updated:{{repoD.updated_at|daysPast}} Day(s) Ago</p>
+        <p>Created On:{{repoD.created_at|date}}</p>
+        <p>Language:{{repoD.language}}</p>
+        <p>Last Updated:{{repoD.updated_at|daysPast}}</p>
+        </div>
         </div>
     </div>
    </div>

@@ -9,8 +9,7 @@ export class HttpServiceService {
   repo!:Repos;
   repoData:any[] =[];
   newUser:any =[]; // Holds the Property for Every Array we Push to the repoData Array
-  
-
+ 
   constructor(private http:HttpClient) {
 this.user = new User("",0,"","",new Date(),new Date(),"");
 this.repo = new Repos("","","",new Date(),"","","",new Date());

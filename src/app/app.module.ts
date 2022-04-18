@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GithubComponent } from './github/github.component';
-import{ HttpClientModule} from '@angular/common/http';
+import { HttpServiceService } from './http-service.service';
+import { HttpClientModule} from '@angular/common/http';
 import { GitFormComponent } from './git-form/git-form.component';
 import { DaysPastPipe } from './days-past.pipe'
 
@@ -18,9 +19,10 @@ import { DaysPastPipe } from './days-past.pipe'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [ HttpServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

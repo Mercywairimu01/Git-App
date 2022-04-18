@@ -1,21 +1,23 @@
 <div class="container" id="hide" >
   <div class="row">
 
-    <h4>User Profile</h4>
+    <h4 style="text-align: center;">User Profile</h4>
     <hr>
      <div class="col-6" id="profile">
          
         
         <h4>{{user.login}}</h4>
-        <img src="{{ httpsevice.user.avatar_url}}" alt="git avatar">
+
+        <img src="{{ httpsevice.user.avatar_url}}" alt="" class="avatar rounded-circle" width="200px">
         <p>{{user.bio}}</p>
      </div>
+     <div class="col-1"></div>
         <div class="col-4" id="profiledetails">
         <p> Joined on:{{user.created_at|date}}</p>
         <p>Last update:{{user.updated_at|date}}</p>
         <p>Repositotires:{{user.public_repos}}</p>
-        <p>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;<a href="{{user.html_url}}" target="_blank">View Github Profile</a></p>
-        <button>  <a class="btn btn-default btn-xs" (click)="Back()" > Back</a></button> 
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{user.html_url}}" target="_blank">View Github Profile</a></p>
+        <!-- <button>  <a class="btn btn-default btn-xs" (click)="Back()" > Back</a></button>  -->
      </div>
      </div>
      <div class="row">
@@ -27,8 +29,9 @@
         <div *ngFor="let repoD of repoDetails ;let i =index">
          <div class="git-results">
         <p style="font-weight: bolder;"><a href="{{repoD.html_url}}"  target="_blank">{{repoD.name}}</a></p>
+        <h6>Clone: <strong appHighlight>{{repoD.clone_url}}</strong></h6>
        
-        <P>Clone:<b>{{repoD.clone_url}}</b></P>
+        <!-- <P>Clone:<b>{{repoD.clone_url}}.appHighlight</b></P> -->
         <p class="description">{{repoD.description}}</p>
         <p>Created On:{{repoD.created_at|date}}</p>
         <p>Language:{{repoD.language}}</p>

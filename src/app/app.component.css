@@ -1,8 +1,14 @@
 .git{
-    font-size: larger;
+    /* font-size: 4vh; */
     font-style: italic;
+    background-color: rgb(163, 186, 177);
 }
 #getstarted{
-    margin-left: 30px;
-    font-weight: bold;
+    /* margin-left: 30px; */
+    margin-top: 10px;
+     
+}
+.searchapp{
+    text-align: center;
+    margin-top: 90px;
 }

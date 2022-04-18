@@ -7,14 +7,16 @@ import { GithubComponent } from './github/github.component';
 import { HttpServiceService } from './http-service.service';
 import { HttpClientModule} from '@angular/common/http';
 import { GitFormComponent } from './git-form/git-form.component';
-import { DaysPastPipe } from './days-past.pipe'
+import { DaysPastPipe } from './days-past.pipe';
+import { HighlightDirective } from './highlight.directive'
 
 @NgModule({
   declarations: [
     AppComponent,
     GithubComponent,
     GitFormComponent,
-    DaysPastPipe
+    DaysPastPipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

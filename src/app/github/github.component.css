@@ -8,6 +8,9 @@
 .git-results:hover{
     transform: scale(1.1);
 }
-/* #hide{
-    display: none;
-} */
+ #hide{
+   margin-top: 50px;
+} 
+#profiledetails{
+    margin-top: 50px;
+}

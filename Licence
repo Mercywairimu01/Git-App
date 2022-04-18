@@ -1,38 +1,6 @@
-# GithubApp
-
-#### By **Mercy Wairimu**
-
-## Description
-This  a website where users may enter a GitHub username into a form, submit it, and see names and descriptions of that person's public repositories. A person can also look for repositories
-### How it wors !
-#### Enter your username or repo name
-1. On the search bar
-
-2. Username will be desplayed at the bottom
-
-## Setup/Installation Requirements
-
-- copy the url on arrow down
-- Clone on your computer
-- npm install 
-- ng serve
-- open the app to the default port 4200 (http://localhost:4200)
-
-## Known Bugs
-
-- None at the moment
-
-## Technologies Used
-
-Angular, Angular material and HttpClient Api
-
-## Support and contact details
-mercy.mambui@student.moringaschool.com
-On slack Mercy Wairimu
-## License
 MIT License
 
-Copyright (c) [2022] [Mercywairimu]
+Copyright (c) 2022 Mercywairimu01
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -51,7 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-
-## Authors Info
-Email - [ mercy.mambui@student.moringaschool.com]

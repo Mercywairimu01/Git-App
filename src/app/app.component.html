@@ -1,7 +1,11 @@
 <div class="git">
-<h3>Github Search App.</h3>
-<p>Enter your Github userName to view your Repositories and Profile</p>
-<a  class="btn bg-primary" id="getstarted" routerLink='/gitUser' routerLinkActive='active'>Get Started</a>&nbsp;
+ <div class="searchapp">
+<h1>Github Search App.</h1>
+<b>Enter your Github userName to view your Repositories and Profile</b>
+<div id="getstarted">
+ <a  class="btn bg-primary"  routerLink='/gitUser' routerLinkActive='active' onclick="hide()">Get Started</a>&nbsp;
+</div>
+</div>
 <router-outlet></router-outlet>
 <app-github></app-github>
 </div>

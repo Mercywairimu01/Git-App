@@ -1,8 +1,8 @@
 .search{
-    background-color: aquamarine ;
     display: flex; 
-    justify-content: center;  
-    gap: 20px; 
+    justify-content: center;   
+    gap: 20px;
+    margin-top: 20px;
 
 }
 #username{

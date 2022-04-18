@@ -1,6 +1,12 @@
-<div class="row" id="search">
+<div class="row" id="search" *ngIf="seeInput">
 
-    <form #gitForm ='ngForm' name="gitForm" (ngSubmit)="submitName">
-        
+    <form #gitForm ='ngForm' name="gitForm" (ngSubmit)="submitName()">
+      <div>
+        <input type="text" class="form-control input-lg mb15 user-input" id="username" [(ngModel)]="userName" name="username" autocomplete="off" placeholder="Github Username">
+        <button type="submit" class="btn btn-success btn-lg btn-block" (click)="submitName()">Search</button>
+       
+      </div>  
     </form>
+    <app-github *ngIf="seeData" (toggleData)="seeUserInput($event)"></app-github>
+    <!-- <app-git-form></app-git-form> -->
 </div>

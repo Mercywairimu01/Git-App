@@ -1,9 +1,9 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit,Output,EventEmitter} from '@angular/core';
 import { HttpServiceService } from '../http-service.service';
 import { User } from '../user';
+import { NgForm } from '@angular/forms';
 import { Repos } from '../repos';
-// import { ThisReceiver } from '@angular/compiler';
-// import { promises } from 'dns';
+
 @Component({
   selector: 'app-github',
   templateUrl: './github.component.html',
@@ -14,17 +14,24 @@ export class GithubComponent implements OnInit {
   // myProfile:any =[];
 
    user!:User;
-   repoD =[];
-   httpsevice!:HttpServiceService
+   repoD:any =[];
+   httpsevice!:HttpServiceService;
+   hideInput!:boolean
 
   constructor(httpsevice:HttpServiceService) {
     this.httpsevice =httpsevice;
+    
   }
+   @Output() toggleData = new EventEmitter();
 
+   Back(){
+    this.hideInput = true;
+    this.toggleData.emit(this.hideInput);
+  }
 
   ngOnInit(): void {
    this.user =this.httpsevice.user; // Get the Response from SearchGithubService from user 
-    this.repoD =this.httpsevice.repoData
+    this.repoD =this.httpsevice.repoData;
 
   }
 

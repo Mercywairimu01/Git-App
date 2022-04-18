@@ -15,15 +15,18 @@ export class GitFormComponent implements OnInit {
   seeInput =true;
   seeData =false;
 
-
    submitName(){
      this.httpsevice.getUser(this.userName);
+    //  this.httpsevice.getRepo(this.repoData);
      this.seeInput = true;
      this.seeData = false;
    }
   seeUserInput(hideInput: any) {
     this.seeInput =hideInput;
     this.seeData =false;
+  }
+  getUser(){
+
   }
 
   constructor(httpsevice:HttpServiceService) {

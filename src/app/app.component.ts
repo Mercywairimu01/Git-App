@@ -5,7 +5,7 @@ import { HttpServiceService } from './http-service.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers:[HttpServiceService]
+   providers:[HttpServiceService]
 })
 export class AppComponent {
   // title = 'Github-app';

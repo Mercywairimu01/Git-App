@@ -1,0 +1,21 @@
+<div>
+<h5>{{user.login}}</h5>
+<img src="{{ httpsevice.user.avatar_url}}" alt="git avatar">
+<p>{{user.bio}}</p>
+<p> Joined on:{{user.created_at|date}}</p>
+<p>Last update:{{user.updated_at|date}}</p>
+<p>Repositotires:{{user.public_repos}}</p>
+<p>&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;<a href="{{user.html_url}}" target="_blank">View Github Profile</a></p>
+</div>
+
+<div>
+  <button>  <a class="btn btn-default btn-xs" (click)="Back()" > Back</a></button> 
+</div>
+<div *ngFor="let repoD of repoD">
+<p><a href="{{repoD.html_url}}"  target="_blank">{{repoD.name}}</a></p>
+<p>Created at:{{repoD.createdOn|date}}</p>
+<P>&nbsp;&nbsp;Clone:&nbsp;&nbsp;<strong>{{repoD.clone_url}}</strong></P>
+<p class="description">{{repoD.description}}</p>
+<Small>Language:{{repoD.Language}}</Small>
+<Small>&nbsp;&nbsp;|&nbsp;&nbsp;Last Updated:{{repoD.updatedOn|daysPast}} Day(s) Ago</Small>
+</div>
